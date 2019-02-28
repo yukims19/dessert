@@ -4,7 +4,7 @@ import ProjectList from "./ProjectList";
 import InputBox from "./InputBox";
 import "./App.css";
 
-const projectList = ["inputBox"];
+const projectList = [{ route: "InputBox", date: "3/1/2019" }];
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
                 path="/"
                 render={() => <ProjectList projectList={projectList} />}
               />
-              <Route exact path="/inputBox" render={() => <InputBox />} />
+              <Route exact path="/InputBox" render={() => <InputBox />} />
               <Route component=<p>Main</p> />
             </Switch>
           </div>

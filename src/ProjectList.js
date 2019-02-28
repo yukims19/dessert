@@ -9,7 +9,11 @@ class ProjectList extends Component {
     return (
       <div className="project-list">
         {this.props.projectList.map(project => {
-          return <a href={"/" + project}>{project}</a>;
+          return (
+            <p>
+              <a href={"/" + project.route}>{project.route}</a> - {project.date}
+            </p>
+          );
         })}
       </div>
     );
